@@ -6,8 +6,8 @@ function mainMenu(){
   console.log("=======MENU=======")
   console.log("1 - HOME")
   console.log("2 - DEPOSITO")
-  console.log ("3 - TRANFERENCIA")
-  console.log ("4 - SAQUE")
+  console.log("3 - TRANFERENCIA")
+  console.log("4 - SAQUE")
   console.log("===================")
   userInput = Number(prompt(" O QUE DESEJA FAZER: "))
 
@@ -40,6 +40,7 @@ function deposito(){
   }else{
     const novoSaldo = saldo + deposito
     console.log(`deposito efetuado com suscesso novo saldo ${novoSaldo}`)
+    return mainMenu()
     //console.log(saldo)
     //novoSaldo.push(novoSaldo)
   } 
