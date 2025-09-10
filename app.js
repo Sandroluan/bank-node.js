@@ -13,15 +13,15 @@ function mainMenu(){
 
 switch (userInput) {
   case 1:
-    return home();
+    return home()
   case 2:
-    return deposito();
+    return deposito()
   case 3:
-    return transf();
+    return transf()
   case 4:
-    return saque();
+    return saque()
   default:
-    console.log("Insira um valor válido!");
+    console.log("Insira um valor válido!")
 }
 }
 
