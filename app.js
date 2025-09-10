@@ -1,23 +1,33 @@
 const prompt = require('prompt-sync')()
+const user = prompt("Insira seu nome: ")
 const saldo = 2000
-const novoSaldo = []
+const novoSaldo = saldo
 function mainMenu(){
   console.log("=======MENU=======")
-  console.log("1 - DEPOSITO")
-  console.log("2 - SAQUE")
+  console.log("1 - HOME")
+  console.log("2 - DEPOSITO")
   console.log ("3 - TRANFERENCIA")
+  console.log ("4 - SAQUE")
   console.log("===================")
   userInput = Number(prompt(" O QUE DESEJA FAZER: "))
 
-  if (userInput == 1){
-    return deposito()
-  }else if(userInput == 2){
-    return saque()
-  }else if(userInput == 3){
-    return transf()
-  }else{
-    console.log("insira um valor valido!")
-  }
+switch (userInput) {
+  case 1:
+    return home();
+  case 2:
+    return deposito();
+  case 3:
+    return transf();
+  case 4:
+    return saque();
+  default:
+    console.log("Insira um valor válido!");
+}
+}
+
+function home(){
+  console.log(`Olá ${user}, seja bem vindo(a)!`)
+  console.log(`saldo disponivel: ${saldo}`)
 }
 
 function deposito(){
@@ -30,7 +40,7 @@ function deposito(){
   }else{
     const novoSaldo = saldo + deposito
     console.log(`deposito efetuado com suscesso novo saldo ${novoSaldo}`)
-    console.log(saldo)
+    //console.log(saldo)
     //novoSaldo.push(novoSaldo)
   } 
 }
