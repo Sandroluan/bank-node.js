@@ -35,17 +35,17 @@ function deposito(){
   } 
 }
 
-// function saque(){
-//   console.log(`Saldo disponivel para saque: ${saldo}.`)
-//   const saque = Number(prompt("Valor: "))
-//   novoSaldo = saldo - saque
-//   if (saque <= 0){
-//     console.log("insira um valor valido para saque")
-//   }else if(saque > saldo){
-//     console.log("saldo insuficiente")
-//   }else{
-//     console.log(`saque efetuado com suscesso`)
-//     console.log(`novo saldo: ${saldo}`)
-//   }
-// }
+function saque(){
+  console.log(`Saldo disponivel para saque: ${saldo}.`)
+  const saque = Number(prompt("Valor: "))
+  novoSaldo = saldo - saque
+  if (saque <= 0){
+    console.log("insira um valor valido para saque")
+  }else if(saque > saldo){
+    console.log("saldo insuficiente")
+  }else{
+    console.log(`saque efetuado com suscesso`)
+    console.log(`novo saldo: ${saldo}`)
+  }
+}
 return mainMenu()
