@@ -27,11 +27,13 @@ function mainMenu() {
 }
 
 function home() {
-  //  console.log(`Olá ${user}, seja bem vindo(a)!`)
   console.log(`saldo disponivel: ${novoSaldo}`);
-  if ((userInput = Number(prompt(" tecle 0 para voltar: ")) != 0)) {
-  } else {
-    return mainMenu();
+  while (userInput != 0) {
+    if ((userInput = Number(prompt(" tecle 0 para voltar: ")) != 0)) {
+      console.log("digite uma opção valida!! ");
+    } else {
+      return mainMenu();
+    }
   }
 }
 
@@ -72,7 +74,7 @@ function saque() {
 function transf() {
   console.log("SERVIÇO INDISPONIVEL");
   while (userInput != 0) {
-    console.log("insira um valor valido!!");
+    console.log("digite uma opçao valida!!");
     if ((userInput = Number(prompt("Tecle 0 para voltar ao menu: ")) != 0)) {
     } else {
       return mainMenu();
